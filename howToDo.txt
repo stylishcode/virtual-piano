@@ -1,0 +1,83 @@
+# document.
+URL, href, title, head, body, links, forms, images
+
+# console.dir(element) -> mostra o documento de outra forma
+
+# Buscando e selecionando elementos
+.getElementById (returns element)
+.getElementsByClassName (returns HTMLCollection)
+.getElementsByTagName (returns HTMLCollection)
+.querySelector (returns element)
+.querySelectorAll (returns NodeList)
+
+# Manipulando conteúdo
+.textContent
+.innerText
+.innerHTML
+.value (inputs)
+
+# Alterando estilos
+.style.property (camelCase)
+.classList
+  .add()
+  .remove()
+  .toggle()
+
+# Navegando pelos elementos
+Parents
+  .parentNode (pai de um elemento)
+  .parentElement (Mesma coisa que o parentNode)
+
+Children
+  .childNodes (returns NodeList)
+  .children (returns HTMLCollection)
+  children x childNodes: childNodes pega espaços no HTML se houver,
+  então children é o mais recomendado
+  
+  .childElementCount (returns total childs size)
+  .firstChild (takes first element)
+  .lastChild (takes last element)
+  .remove (remove element)
+
+Siblings
+  .nextSibling (próximo irmão)
+  .nextElementSibling (mesma coisa do nextSibling)
+  .previousSibling (irmão anterior)
+  .previousElementSibling (mesma coisa do previousSibling)
+
+Criando Elemento
+  .createElement("tagHtmlDesejada")
+
+Trabalhando com a propriedades dos elementos
+  .setAttribute()
+  .getAttribute()
+  .removeAttribute()
+
+Inserindo Elementos 
+  .insertBefore()
+  .insertAfter()
+  .append()/.appendChild()
+  .prepend()
+
+Eventos
+  .AddEventListener()
+    load
+    click
+    scroll
+    keydown
+    change
+    submit
+
+event
+  target
+    id
+    className
+  type
+    clientX / clientY (relative to document)
+    offsetX / offsetY (relative to element)
+    preventDefault()
+
+Você sabia?
+- Cada ramificação da  árvore, é um nó (node, element) e cada nó contém um objeto.
+- É possível aplicar o método .forEach em NodeList, mas não em HTMLCollection (ver compatibilidade do navegador)
+- Você pode converter uma NodeList em um Array, usando Array.from() (ver compatibilidade do navegador)

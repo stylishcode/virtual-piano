@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert After Example</title>
+</head>
+<body>
+  <div id="elementoPai">
+    <span id="elementoFilho">
+      foo bar
+    </span>
+  </div>
+
+  <script>
+    // Cria um novo elemento <span> vazio
+    let novoElemento = document.createElement("span");
+    novoElemento.innerText = "Olá"
+
+    // Guarda a referência do elemento atrás do qual nos queremos inserir o novo elemento
+    let ElementoReferencia = document.getElementById("elementoFilho");
+
+    // Guarda a referência do elemento pai
+    let elementoPai = ElementoReferencia.parentNode;
+
+    // Insere o novo elemento na DOM depois do ElementoReferencia
+    elementoPai.insertBefore(novoElemento, ElementoReferencia.nextSibling);
+  </script>
+</body>
+</html>
